@@ -301,6 +301,7 @@ html[dir='rtl'] .search-btn {
 }
 
 .nav-li {
+  padding: 0 15px;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -311,6 +312,25 @@ html[dir='rtl'] .search-btn {
 .nav-a {
   height: 50px;
   color: #999;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-a:hover, .nav-a:focus {
+  color: #3b66b3;
+}
+
+.drop-link .nav-a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,24 +340,48 @@ html[dir='rtl'] .search-btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 15px;
-  font-size: 16px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
-.nav-a::after {
+.drop-link .nav-a::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: "\f053";
   font-size: 11px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-html[dir='ltr'] .nav-a::after {
+html[dir='ltr'] .drop-link .nav-a::after {
   content: "\f054";
 }
 
-.nav-a:hover, .nav-a:focus {
+.drop-link .nav-a.active:after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+html[dir='ltr'] .drop-link .nav-a.active:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.sub-ul {
+  padding: 0 15px 8px;
+  display: none;
+}
+
+.sub-a {
+  height: 30px;
+  color: #999;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-a:hover, .sub-a:focus {
   color: #3b66b3;
 }
 

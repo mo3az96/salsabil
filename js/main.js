@@ -119,6 +119,10 @@ $(document).ready(function () {
             }
         });
     }
+    $('.drop-link .nav-a').click(function () {
+        $(this).siblings(".sub-ul").slideToggle(300);
+        $(this).toggleClass("active");
+    });
     if ($(window).width() <= 767) {
         /////////search/////////
         $('.search-icon').click(function () {
